@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1330" viewBox="0 0 1800 1330" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title description">
+<title id="title">Arquitectura del asesor académico GraphRAG</title>
+<desc id="description">Aplicación local con Streamlit y Python; interpretación y generación con Bedrock; base de conocimiento GraphRAG con Neptune Analytics; ingestión de documentos Markdown desde S3. Sin identificadores ni regiones específicas.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="context-stroke"/></marker></defs>
+<rect width="1800" height="1330" fill="#ffffff"/>
+<rect x="40.0" y="150.0" width="560.0" height="900.0" rx="18" fill="#FAFAFB" stroke="#AAB4BD"/>
+<path d="M 58.0 150.0 H 582.0 Q 600.0 150.0 600.0 168.0 V 195.0 H 40.0 V 168.0 Q 40.0 150.0 58.0 150.0 Z" fill="#F4F5F6" stroke="#AAB4BD"/>
+<rect x="640.0" y="150.0" width="1120.0" height="900.0" rx="18" fill="#FCFBFD" stroke="#B5A7C5"/>
+<path d="M 658.0 150.0 H 1742.0 Q 1760.0 150.0 1760.0 168.0 V 195.0 H 640.0 V 168.0 Q 640.0 150.0 658.0 150.0 Z" fill="#ECE8F3" stroke="#B5A7C5"/>
+<path d="M 190.0 305.0 L 190.0 390.0 L 200.0 390.0" fill="none" stroke="#6C7F8C" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 350.0 275.0 L 350.0 450.0 L 320.0 450.0" fill="none" stroke="#6C7F8C" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 320.0 414.0 L 620.0 414.0 L 620.0 315.0 L 700.0 314.5" fill="none" stroke="#9174A8" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 200.0 510.0 L 200.0 560.0" fill="none" stroke="#6C7F8C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 350.0 625.0 L 320.0 625.0" fill="none" stroke="#9D8968" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 320.0 468.0 L 620.0 468.0 L 620.0 440.0 L 1000.0 440.0 L 1000.0 490.0 L 1040.0 490.4" fill="none" stroke="#9174A8" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 1340.0 555.0 L 1420.0 555.0" fill="none" stroke="#9174A8" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 1190.0 470.0 L 1190.0 360.0" fill="none" stroke="#9174A8" stroke-width="1.5" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<path d="M 200.0 690.0 L 200.0 780.0" fill="none" stroke="#6C7F8C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 80.0 474.0 L 60.0 474.0 L 60.0 860.0 L 80.0 860.0" fill="none" stroke="#6C7F8C" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 960.0 848.0 L 990.0 848.0 L 990.0 615.0 L 1040.0 614.5" fill="none" stroke="#78967E" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<path d="M 1145.0 640.0 L 1145.0 820.0" fill="none" stroke="#78967E" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4" marker-start="url(#arrow)"/>
+<path d="M 1295.0 640.0 L 1295.0 770.0 L 1380.0 770.0 L 1380.0 880.0 L 1420.0 880.0" fill="none" stroke="#78967E" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4" marker-start="url(#arrow)"/>
+<path d="M 1235.0 640.0 L 1235.0 690.0 L 1560.0 690.0 L 1560.0 640.0" fill="none" stroke="#78967E" stroke-width="1.5" marker-end="url(#arrow)" stroke-dasharray="5 4"/>
+<text x="55.0" y="58.0" font-family="Arial, Helvetica, sans-serif" font-size="28.0" fill="#263238" text-anchor="start" font-weight="700">Asesor académico GraphRAG · Arquitectura actual</text>
+<text x="55.0" y="95.0" font-family="Arial, Helvetica, sans-serif" font-size="15.0" fill="#607078" text-anchor="start" font-weight="400">Consultas atómicas + recuperación documental en AWS + relaciones locales del plan. Componentes y flechas editables.</text>
+<text x="320.0" y="178.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#344452" text-anchor="middle" font-weight="700">COMPUTADORA LOCAL · Python / Streamlit · localhost:8501</text>
+<text x="1200.0" y="178.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#514263" text-anchor="middle" font-weight="700">AWS · Cuenta y región configuradas por el usuario</text>
+<rect x="80.0" y="225.0" width="220.0" height="80.0" rx="20" fill="#EEE7DA" stroke="#BBA888"/>
+<text x="190.0" y="251.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Usuario / navegador</text>
+<text x="190.0" y="269.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Pregunta libre · mapa ·</text>
+<text x="190.0" y="286.77500000000003" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">respuesta</text>
+<rect x="350.0" y="225.0" width="210.0" height="100.0" rx="20" fill="#EEF0F3" stroke="#AAB4BD"/>
+<text x="455.0" y="253.75" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="middle" font-weight="700">Historial visual del chat</text>
+<text x="455.0" y="270.625" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="middle" font-weight="400">st.session_state</text>
+<text x="455.0" y="287.5" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="middle" font-weight="400">Cada consulta es independiente</text>
+<text x="455.0" y="304.375" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="middle" font-weight="400">Sin persistencia en una BD</text>
+<rect x="80.0" y="390.0" width="240.0" height="120.0" rx="20" fill="#DEE6EC" stroke="#8D9EAC"/>
+<text x="200.0" y="427.9" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Chat y orquestación</text>
+<text x="200.0" y="445.45" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">app.py · Streamlit + Boto3</text>
+<text x="200.0" y="463.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Recibe mensajes, llama APIs</text>
+<text x="200.0" y="480.54999999999995" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">y coordina la presentación</text>
+<path d="M 350.0 575.0 V 675.0 C 350.0 695.0 560.0 695.0 560.0 675.0 V 575.0 Z" fill="#EEE7DA" stroke="#BBA888"/>
+<ellipse cx="455.0" cy="575.0" rx="105.0" ry="15" fill="#EEE7DA" stroke="#BBA888"/>
+<text x="455.0" y="594.125" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Plan de correlativas LOCAL</text>
+<text x="455.0" y="611.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">PREREQUISITES</text>
+<text x="455.0" y="629.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">COURSE_LEVELS</text>
+<text x="455.0" y="646.775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">COURSE_DESCRIPTIONS</text>
+<text x="455.0" y="664.325" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">9 materias · 9 relaciones</text>
+<rect x="80.0" y="560.0" width="240.0" height="130.0" rx="20" fill="#DFE9E2" stroke="#8DA793"/>
+<text x="200.0" y="594.125" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Selección determinista de</text>
+<text x="200.0" y="611.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">relaciones</text>
+<text x="200.0" y="629.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">academic_context()</text>
+<text x="200.0" y="646.775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Calcula anteriores, posteriores,</text>
+<text x="200.0" y="664.325" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">roadmaps y alcance del mapa</text>
+<rect x="80.0" y="780.0" width="240.0" height="160.0" rx="20" fill="#DEE6EC" stroke="#8D9EAC"/>
+<text x="200.0" y="811.575" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Presentación y conclusión</text>
+<text x="200.0" y="829.125" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">HTML / SVG + CSS + JavaScript</text>
+<text x="200.0" y="846.6750000000001" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Mapa local con hover / clic</text>
+<text x="200.0" y="864.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">immediate_summary(): resumen</text>
+<text x="200.0" y="881.7750000000001" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">local</text>
+<text x="200.0" y="899.325" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Respuesta original de Bedrock</text>
+<text x="200.0" y="916.875" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">y fuentes en un desplegable</text>
+<rect x="350.0" y="780.0" width="210.0" height="160.0" rx="20" fill="#FFF4DF" stroke="#C9B387"/>
+<text x="365.0" y="813.4375" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="700">IMPORTANTE</text>
+<text x="365.0" y="830.3125" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">El mapa y el resumen no se</text>
+<text x="365.0" y="847.1875" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">descargan de Neptune.</text>
+<text x="365.0" y="864.0625" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">Se calculan con el plan local.</text>
+<text x="365.0" y="880.9375" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">Las consultas ambiguas piden</text>
+<text x="365.0" y="897.8125" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">aclaración antes de consultar</text>
+<text x="365.0" y="914.6875" font-family="Arial, Helvetica, sans-serif" font-size="12.5" fill="#162029" text-anchor="start" font-weight="400">la KB.</text>
+<rect x="700.0" y="230.0" width="250.0" height="130.0" rx="20" fill="#E7DFF0" stroke="#AA95BF"/>
+<text x="825.0" y="264.125" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Amazon Bedrock Runtime</text>
+<text x="825.0" y="281.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Modelo de texto · interpretación</text>
+<text x="825.0" y="299.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Converse</text>
+<text x="825.0" y="316.775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Pregunta actual + catálogo → JSON</text>
+<text x="825.0" y="334.325" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">intent / subjects / focus</text>
+<rect x="1040.0" y="230.0" width="300.0" height="130.0" rx="20" fill="#E7DFF0" stroke="#AA95BF"/>
+<text x="1190.0" y="264.125" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Amazon Bedrock Runtime</text>
+<text x="1190.0" y="281.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Modelo de texto · generación</text>
+<text x="1190.0" y="299.225" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Contexto recuperado + pregunta</text>
+<text x="1190.0" y="316.775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">→ respuesta en español</text>
+<text x="1190.0" y="334.325" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Modelo o perfil configurado</text>
+<text x="1435.0" y="253.0" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400">Son dos usos del modelo configurado,</text>
+<text x="1435.0" y="270.55" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400">no modelos entrenados por la app.</text>
+<text x="1435.0" y="288.1" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400"></text>
+<text x="1435.0" y="305.65" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400">Si se utiliza inferencia entre regiones,</text>
+<text x="1435.0" y="323.2" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400">el enrutamiento depende del perfil</text>
+<text x="1435.0" y="340.75" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#685776" text-anchor="start" font-weight="400">elegido.</text>
+<rect x="1040.0" y="470.0" width="300.0" height="170.0" rx="20" fill="#DED2EB" stroke="#9E83B6"/>
+<text x="1190.0" y="515.35" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Amazon Bedrock Knowledge Bases</text>
+<text x="1190.0" y="532.9" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Base de conocimiento GraphRAG</text>
+<text x="1190.0" y="550.45" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">API: RetrieveAndGenerate</text>
+<text x="1190.0" y="568.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Recupera contexto, coordina generación</text>
+<text x="1190.0" y="585.5500000000001" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">y devuelve respuesta + citas</text>
+<text x="1190.0" y="603.1" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Sin reutilizar sesiones entre consultas</text>
+<path d="M 1420.0 485.0 V 625.0 C 1420.0 645.0 1700.0 645.0 1700.0 625.0 V 485.0 Z" fill="#DFE7ED" stroke="#8EA2B2"/>
+<ellipse cx="1560.0" cy="485.0" rx="140.0" ry="15" fill="#DFE7ED" stroke="#8EA2B2"/>
+<text x="1560.0" y="515.35" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Amazon Neptune Analytics</text>
+<text x="1560.0" y="532.9" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Grafo + vectores</text>
+<text x="1560.0" y="550.45" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Entidades y relaciones extraídas</text>
+<text x="1560.0" y="568.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Embeddings de documentos</text>
+<text x="1560.0" y="585.5500000000001" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Búsqueda semántica + recorrido</text>
+<text x="1560.0" y="603.1" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">de conexiones del grafo</text>
+<rect x="700.0" y="490.0" width="260.0" height="150.0" rx="20" fill="#F5F1F8" stroke="#C6B8D1"/>
+<text x="715.0" y="520.3" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="700">GraphRAG recupera evidencia documental.</text>
+<text x="715.0" y="536.5" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">No equivale a ejecutar una regla exacta</text>
+<text x="715.0" y="552.6999999999999" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">de habilitación académica.</text>
+<text x="715.0" y="568.9" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">La app no consulta Neptune</text>
+<text x="715.0" y="585.0999999999999" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">directamente.</text>
+<text x="715.0" y="601.3" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">No inspeccionamos aquí su esquema</text>
+<text x="715.0" y="617.5" font-family="Arial, Helvetica, sans-serif" font-size="12.0" fill="#162029" text-anchor="start" font-weight="400">extraído.</text>
+<text x="715.0" y="729.0" font-family="Arial, Helvetica, sans-serif" font-size="14.0" fill="#677F6D" text-anchor="start" font-weight="700">PREPARACIÓN DEL CONOCIMIENTO · al cargar documentos y sincronizar; no en cada mensaje</text>
+<path d="M 700.0 835.0 V 945.0 C 700.0 965.0 960.0 965.0 960.0 945.0 V 835.0 Z" fill="#E0EBDD" stroke="#92AC88"/>
+<ellipse cx="830.0" cy="835.0" rx="130.0" ry="15" fill="#E0EBDD" stroke="#92AC88"/>
+<text x="830.0" y="867.9" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Amazon S3</text>
+<text x="830.0" y="885.4499999999999" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Documentos Markdown</text>
+<text x="830.0" y="903.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Bucket privado de documentos</text>
+<text x="830.0" y="920.55" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Plan, contenidos y correlativas</text>
+<rect x="1040.0" y="820.0" width="300.0" height="100.0" rx="20" fill="#E7DFF0" stroke="#AA95BF"/>
+<text x="1190.0" y="856.675" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Bedrock · Modelo de embeddings</text>
+<text x="1190.0" y="874.2249999999999" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Texto → vectores numéricos</text>
+<text x="1190.0" y="891.775" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Dimensiones según configuración</text>
+<rect x="1420.0" y="820.0" width="280.0" height="120.0" rx="20" fill="#E7DFF0" stroke="#AA95BF"/>
+<text x="1560.0" y="857.9" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="700">Bedrock · Modelo de construcción</text>
+<text x="1560.0" y="875.4499999999999" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Construcción del grafo</text>
+<text x="1560.0" y="893.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">Extrae entidades y relaciones</text>
+<text x="1560.0" y="910.55" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="middle" font-weight="400">durante la ingestión</text>
+<text x="715.0" y="1008.0" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#677F6D" text-anchor="start" font-weight="400">Knowledge Base coordina parser / chunking, modelos e indexación. Sync: StartIngestionJob. No se entrena un modelo nuevo.</text>
+<rect x="640.0" y="1100.0" width="1120.0" height="125.0" rx="20" fill="#F2ECE1" stroke="#BDAE91"/>
+<text x="655.0" y="1140.4" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="700">SEGURIDAD · IAM y credenciales</text>
+<text x="655.0" y="1157.95" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Perfil AWS local / credenciales temporales → Boto3 firma las llamadas (no hay claves AWS en el navegador).</text>
+<text x="655.0" y="1175.5" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Converse requiere bedrock:InvokeModel; consulta: bedrock:RetrieveAndGenerate.</text>
+<text x="655.0" y="1193.0500000000002" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Rol de servicio de la KB → lectura S3, invocación de modelos y acceso a Neptune Analytics.</text>
+<rect x="40.0" y="1100.0" width="560.0" height="125.0" rx="20" fill="#FAFAFB" stroke="#AAB4BD"/>
+<text x="55.0" y="1131.625" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="700">LEYENDA</text>
+<text x="55.0" y="1149.175" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Línea continua: consulta y lógica local</text>
+<text x="55.0" y="1166.725" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Línea punteada verde: ingestión / Sync</text>
+<text x="55.0" y="1184.275" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">Dos copias del plan: S3 y Python</text>
+<text x="55.0" y="1201.825" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#162029" text-anchor="start" font-weight="400">deben mantenerse consistentes.</text>
+<text x="55.0" y="1268.0" font-family="Arial, Helvetica, sans-serif" font-size="13.0" fill="#607078" text-anchor="start" font-weight="400">Implementación actual: app local; sin Lambda, API Gateway, EC2 ni AgentCore. No se acumulan aprobaciones ni se evalúa habilitación para cursar. El mapa completo local no requiere consulta a AWS.</text>
+<rect x="122.3" y="337" width="145.4" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="195" y="350" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">1 · mensaje / resultado</text>
+<rect x="385.2" y="352" width="139.6" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="455" y="365" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">sin contexto acumulado</text>
+<rect x="568.9" y="382" width="122.2" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="630" y="395" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">2 · Converse / JSON</text>
+<rect x="118.60000000000001" y="528" width="162.79999999999998" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="200" y="541" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">3 · intención interpretada</text>
+<rect x="281.8" y="613" width="116.39999999999999" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="340" y="626" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">relaciones exactas</text>
+<rect x="692.3" y="417" width="261.4" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="823" y="430" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">4 · RetrieveAndGenerate / respuesta + citas</text>
+<rect x="1310.2" y="537" width="139.6" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="1380" y="550" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">5 · recuperar contexto</text>
+<rect x="1065.1" y="405" width="249.79999999999998" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="1190" y="418" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">6 · consulta atómica / respuesta generada</text>
+<rect x="104.10000000000001" y="735" width="191.79999999999998" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="200" y="748" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">7 · nodos y relaciones directas</text>
+<rect x="63.60000000000001" y="707" width="162.79999999999998" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="145" y="720" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">respuesta y fuentes de AWS</text>
+<rect x="819.1" y="749" width="133.8" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="886" y="762" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">A · lectura S3 / Sync</text>
+<rect x="1098.6" y="740" width="162.79999999999998" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="1180" y="753" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">B · fragments / embeddings</text>
+<rect x="1332.8" y="770" width="174.4" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="1420" y="783" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">C · extracción de relaciones</text>
+<rect x="1362.8" y="672" width="174.4" height="18" rx="3" fill="#ffffff" fill-opacity=".94"/>
+<text x="1450" y="685" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#263238">D · indexar grafo + vectores</text>
+</svg>

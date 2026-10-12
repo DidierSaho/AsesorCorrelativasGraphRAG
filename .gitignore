@@ -1,0 +1,21 @@
+.env
+.env.*
+!.env.example
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.idea/
+.vscode/
+.DS_Store
+.aws/
+.streamlit/secrets.toml
+credentials
+*.pem
+*.key
+*.p12
+*.log
+*.zip
+# Notas privadas de la cuenta original.
+PAUSA-Y-REINICIO.md
